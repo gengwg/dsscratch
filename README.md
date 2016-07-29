@@ -35,3 +35,24 @@ sudo yum install python-matplotlib
     for visualizing the relationship between two paired sets of data
 
 
+## Chapter 4 - Linear Algebra
+
+vectors are points in some finite-dimensional space.
+
+using lists as vectors is great for exposition but terrible for performance.
+
+in production, i would want to use the NumPy library,
+which includes a high-performance array class
+with all sorts of arithmetic operations included.
+
+represent matrices as lists of lists,
+with each inner list having the same length
+and representing a row of a matrix.
+
+=> matrix A has len(A) rows, and len(A[0]) columns.
+
+* matrix to represent a data set consisting of multiple vectors.
+* use n x k matrix to represent a linear function that maps k-dimensional
+ vectors to n-dimensional.
+* use to represent binary relationships
+
