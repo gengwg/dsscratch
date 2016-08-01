@@ -56,3 +56,15 @@ and representing a row of a matrix.
  vectors to n-dimensional.
 * use to represent binary relationships
 
+## Chapter 5 - Statistics
+
+a generalization of the median is the quantile,
+which represents the value less than which a certain percentile of the data lies.
+the median represents the value less than which 50% of the data lies.
+
+Simpson's Paradox
+
+correlations can be misleading when confounding variables are ignored.
+
+correlation is measuring the relationship between two variables all else being equal.
+
