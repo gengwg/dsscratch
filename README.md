@@ -72,9 +72,17 @@ correlation is measuring the relationship between two variables all else being e
 
 ### A family with two (unknown) children
 
-We assume:
+Assumption:
 
     1. Each child is equally likely to be a boy or girl
-    2. The gender of the sencond child is independent of the gender of the first child
+    2. The gender of the second child is independent of the gender of the first child
+
+then the event "no girls" has a probability of 1/4,
+the event "one girl, one boy" has probability 1/2,
+and the event "two girls" has probability 1/4.
+
+Probability of event "both children are girls" (B)
+conditioned on the event "the older child is a girl" (G):
+    P(B|G) = P(B,G) / P(G) = P(B) / P(G) = 1/2
 
 
