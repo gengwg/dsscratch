@@ -74,5 +74,7 @@ correlation is measuring the relationship between two variables all else being e
 
 We assume:
 
-1. Each child is equally likely to be a boy or girl
-2. The gender of the sencond child is independent of the gender of the first child
+    1. Each child is equally likely to be a boy or girl
+    2. The gender of the sencond child is independent of the gender of the first child
+
+
