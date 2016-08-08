@@ -83,7 +83,7 @@ then the event "no girls" has a probability of 1/4,
 the event "one girl, one boy" has probability 1/2,
 and the event "two girls" has probability 1/4.
 
-#### Probability of event "both children are girls" (B)
+#### Probability of event "both children are girls" (B)\
 conditioned on the event "the older child is a girl" (G):
 
     P(B|G) = P(B,G) / P(G) = P(B) / P(G) = 1/2
@@ -92,7 +92,7 @@ since the event B and G is just event B.
 (Once you know both children are girls, it's necessarily true that
 the older child is a girl.)
 
-#### Probability of the event "both children are girls" (B)
+#### Probability of the event "both children are girls" (B)\
 conditioned on the event "at least one of the children is a girl" (L):
 
     P(B|L) = P(B, L) / P(L) = P(B) / P(L) = 1/3
