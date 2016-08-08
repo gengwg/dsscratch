@@ -73,5 +73,6 @@ correlation is measuring the relationship between two variables all else being e
 ### A family with two (unknown) children
 
 We assume:
+
 1. Each child is equally likely to be a boy or girl
 2. The gender of the sencond child is independent of the gender of the first child
