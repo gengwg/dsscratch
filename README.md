@@ -68,3 +68,10 @@ correlations can be misleading when confounding variables are ignored.
 
 correlation is measuring the relationship between two variables all else being equal.
 
+## Chapter 6 - Probability
+
+### A family with two (unknown) children
+
+We assume:
+    1. Each child is equally likely to be a boy or girl
+    2. The gender of the sencond child is independent of the gender of the first child
