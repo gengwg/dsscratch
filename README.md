@@ -184,4 +184,6 @@ that a random variable is less than or equal to a certain value.
 Normal Distribution is completely determined by two factors:
 its mean u (mu) and its standard deviation s (sigma).
 
-$$X_i$$
+    f(x|u,s) = 1/sqrt(2*pi)*s * exp(-(x-u)**2 / 2*s**2)
+
+When u = 0 and s =1, it's called *standard normal distribution*.
