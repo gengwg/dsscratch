@@ -165,3 +165,23 @@ weighted by their probabilities.
 
 Random variables can be *conditioned* on events.
 
+### Continuous distributions
+
+*discrete distribution* associates positive probabilities with discrete outcomes.
+
+*uniform distribution* puts equal weight on all the numbers between 0 and 1.
+Python's random.random() is a random variable with uniform density.
+
+We represent a continuous distribution with a *probability density function* (pdf)
+such that the probability of seeing a value in a certain interval
+equals the integral of the density function over the interval.
+
+*cumulative distribution function* (cdf) gives the probability
+that a random variable is less than or equal to a certain value.
+
+### Normal Distribution
+
+Normal Distribution is completely determined by two factors:
+its mean u (mu) and its standard deviation s (sigma).
+
+$$X_i$$
