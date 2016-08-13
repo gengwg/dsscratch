@@ -187,3 +187,15 @@ its mean u (mu) and its standard deviation s (sigma).
     f(x|u,s) = 1/sqrt(2*pi)*s * exp(-(x-u)**2 / 2*s**2)
 
 When u = 0 and s =1, it's called *standard normal distribution*.
+If Z is a standard normal random variable, then:
+
+    X = sZ + u
+
+is also a normal but with mean _u_ and standard deviation _s_.
+Conversely if X is a normal Random variable with mean _u_ and
+standard deviation _s_,
+
+    Z = (X - u) / s
+
+is a standard normal variable.
+
