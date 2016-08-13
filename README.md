@@ -105,7 +105,7 @@ than it has both girls.)
 ### Bayes's Theorem
 
 ```
-    P(E|F) = P(E,F) / P(F) = P(F|E) P(E) / P(F)
+    P(E|F) = P(E,F) / P(F) = P(F|E)*P(E) / P(F)
 ```
 
 The event F can be split into two mutually exclusive events "F and E" and "F and not E".
@@ -117,6 +117,39 @@ The event F can be split into two mutually exclusive events "F and E" and "F and
 so that
 
 ```
-    P(E|F) = P(F|E) P(E) / (P(F|E)*P(E) + P(F|^E)*P(^E))
+    P(E|F) = P(F|E)*P(E) / [P(F|E)*P(E) + P(F|^E)*P(^E)]
 ```
+
+### Positive test
+
+A certain disease affects 1 in every 10,000 people.
+There is a test for this disease that gives the correct result 99% of the time.
+
+T for "your test is positive";
+D for "you have the disease".
+
+Bayes Theorem says that the probability that you have the disease,
+conditional on testing positive:
+
+```
+    P(D|T) = P(T|D)*P(D) / [P(T|D)*P(D) + P(T|^D)*P(^D)]
+
+P(T|D)  - probability that someone with the disease tests positive = 0.99
+P(D)    - probability that any person has the disease: 1/10,000 = 0.0001
+P(T|^D) - probability that someone w/o the disease tests positive = 0.01
+P(^D)   - probability that any person doesn't have the disease: 0.9999
+
+>>> 0.99*0.0001/(0.99*0.0001 + 0.01*0.9999)
+0.00980392156862745
+
+==>
+    P(D|T) = 0.98 %
+```
+
+Less than 1% of the people who test positive actually have the disease.
+
+A more intuitive way to see this is to image a population of 1 million people.
+You expect 100 of them to have disease, 99 of those 100 test positive.
+Expect 999,900 not to have disease, 9999 test positive.
+Which means you expect 99 out of (99+9999) positive testers to actually have the disease.
 
