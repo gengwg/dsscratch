@@ -102,3 +102,21 @@ again, the event B and G is just event B.
 then it is twice as likely that the family has one boy and one girl
 than it has both girls.)
 
+### Bayes's Theorem
+
+```
+    P(E|F) = P(E,F) / P(F) = P(F|E) P(E) / P(F)
+```
+
+The event F can be split into two mutually exclusive events "F and E" and "F and not E".
+
+```
+    P(F) = P(F,E) + P(F,^E)
+```
+
+so that
+
+```
+    P(E|F) = P(F|E) P(E) / (P(F|E)*P(E) + P(F|^E)*P(^E))
+```
+
