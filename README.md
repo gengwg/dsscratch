@@ -1,5 +1,4 @@
-# dsscratch
-data science from scratch
+#data science from scratch
 
 ## chapter 2 - a crash course in python
 
@@ -120,7 +119,7 @@ so that
     P(E|F) = P(F|E)*P(E) / [P(F|E)*P(E) + P(F|^E)*P(^E)]
 ```
 
-### Positive test
+#### Positive test
 
 A certain disease affects 1 in every 10,000 people.
 There is a test for this disease that gives the correct result 99% of the time.
@@ -152,4 +151,17 @@ A more intuitive way to see this is to image a population of 1 million people.
 You expect 100 of them to have disease, 99 of those 100 test positive.
 Expect 999,900 not to have disease, 9999 test positive.
 Which means you expect 99 out of (99+9999) positive testers to actually have the disease.
+
+### Random Variables
+
+A *random variable* is a variable whose possible values have an
+associated probability distribution.
+
+The associated *probability distribution* gives the probability
+that the variable realizes each of its possible values.
+
+*Expected value* of a random variable is the average of its value
+weighted by their probabilities.
+
+Random variables can be *conditioned* on events.
 
