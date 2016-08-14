@@ -199,3 +199,25 @@ standard deviation _s_,
 
 is a standard normal variable.
 
+### Central limit theorem
+
+*Central limit theorem* says that a random variable defined as
+the average of a large number of independent and identically
+distributed random variable is approximately normally distributed.
+
+In particular, if x_1,...,x_n are random variables with mean u
+and standard deviation s, if n is large, then
+
+    1/n (x_1 + ... + x_n)
+
+is approximately normally distributed with mean _u_
+and standard deviation _s/sqrt(n)_.
+
+Equivalently,
+
+    (x_1 + ... + x_n) - u*n
+    -----------------------
+            s*sqrt(n)
+
+is approximately normally distributed with mean 0
+and standard deviation 1.
