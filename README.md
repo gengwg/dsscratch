@@ -221,3 +221,11 @@ Equivalently,
 
 is approximately normally distributed with mean 0
 and standard deviation 1.
+
+The mean of a Bernoulli(p) variable is p, and it's
+standard deviation is _sqrt(p(1-p))_.
+Central limit theorem says that as n gets large,
+a Binomial(n,p) variable is approximately a normal
+random variable with mean _u=np_, an standard deviation
+_s=sqrt(np(1-p))_
+
