@@ -63,9 +63,6 @@ def distance(v, w):
     return math.sqrt(squared_distance(v, w))
 
 
-def distance(v, w):
-    return math.sqrt(vector_subtract(v, w))
-
 ## Matrices
 
 def shape(A):
