@@ -229,3 +229,22 @@ a Binomial(n,p) variable is approximately a normal
 random variable with mean _u=np_, an standard deviation
 _s=sqrt(np(1-p))_
 
+### chapt 9 Getting Data
+
+you should always use a with block, so that they will be closed automatically at the end of block
+```python
+with open(filename, 'r') as f:
+    data = function_that_gets_data_from(f)
+
+# at this point f has already been closed
+process(data)
+```
+
+you should always work with csv files in _binary_ mode by including a _b_ after the r or w.
+
+if file has no headers, you can use csv.reader to iterate over the rows, each of which will be an appropriately split list.
+
+if your file has headers, you can either skip the header row (with initial call ot reader.next()) or get each row as a dict (with the headers as keys) by using csv.DictReader.
+even if your file doens't have the headers you can still use DictReader by passing it the keys as fieldnames parameter.
+
+
