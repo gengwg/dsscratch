@@ -119,8 +119,6 @@ def covariance(x, y):
     n = len(x)
     return dot(de_mean(x), de_mean(y)) / (n - 1)
 
-print covariance(num_friends, daily_minutes)
-
 def correlation(x, y):
     stdev_x = standard_deviation(x)
     stdev_y = standard_deviation(y)
@@ -128,6 +126,9 @@ def correlation(x, y):
         return covariance(x, y) / stdev_x / stdev_y
     else:
         return 0 # if no variation, correlation is 0
+
+
+print covariance(num_friends, daily_minutes)
 
 print correlation(num_friends, daily_minutes)
 
