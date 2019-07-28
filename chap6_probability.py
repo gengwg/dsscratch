@@ -133,25 +133,18 @@ def make_hist(p, n, num_points):
     plt.title("binomial distribution vs normal approximation")
     plt.show()
 
-<<<<<<< HEAD
-if __name__ == "__main__":
-=======
 if __name__ == '__main__':
 
     print uniform_pdf(0.4)
     print uniform_cdf(0.4)
->>>>>>> 1d3f3204fa09666239ab0ac1401df629551a719c
 
     plot_normal_pdf(plt)
 
     plot_normal_cdf(plt)
 
-<<<<<<< HEAD
     make_hist(0.75, 100, 10000)
-=======
     print inverse_normal_cdf(0.2, mu=3)
 
     print bernoulli_trial(0.5)
 
     make_hist(0.75, 100, 10000)
->>>>>>> 1d3f3204fa09666239ab0ac1401df629551a719c
