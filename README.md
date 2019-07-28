@@ -229,3 +229,18 @@ a Binomial(n,p) variable is approximately a normal
 random variable with mean _u=np_, an standard deviation
 _s=sqrt(np(1-p))_
 
+## Chapter 7 - Hypothesis and inference
+
+_significance_: how willing we are to make a type 1 _error_ ("false positive"), i.e. we reject H_0 even though it's true. 
+It's often set to 5%.
+
+_power_ of a test: probability of making a _type 2 error_, i.e. we faill to reject H_0 even though it's not false.
+
+_p-value_: assuming H_0 is true, the probability that we would see a value at least as extreme as the one we actually observed.
+
+_continuity corection_: normal_probability_between(529.5, 530.5, mu_0, sigma_0) is a better estimate of the prob of seeing 530 heads than normal_probability_between(530, 531, mu_0, sigma_0)
+
+
+the heads probability p is a parameter of the unknown "heads" distribution. construct a _confidence interval_around the observed value of the parameter.
+
+
