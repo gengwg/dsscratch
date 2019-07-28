@@ -91,3 +91,6 @@ ENV/
 
 # vim backup file
 *~
+
+# pycharm
+.idea

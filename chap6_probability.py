@@ -29,7 +29,6 @@ print "P(both | either):", both_girls / either_girl
 def uniform_pdf(x):
     return 1 if x >= 0 and x < 1 else 0
 
-print uniform_pdf(0.4)
 
 
 # cumulative distribution function for uniform distribution
@@ -39,7 +38,6 @@ def uniform_cdf(x):
     elif x < 1: return x    # e.g. P(x <= 0.4) = 0.4
     else:       return 1        # uniform random is always less than 1
 
-print uniform_cdf(0.4)
 
 import math
 # normal distribution
@@ -47,7 +45,6 @@ def normal_pdf(x, mu=0, sigma=1):
     sqrt_two_pi = math.sqrt(2 * math.pi)
     return math.exp(-(x-mu) ** 2 /2 / sigma ** 2) / (sqrt_two_pi * sigma)
 
-print normal_pdf(0.4)
 
 def plot_normal_pdf(plt):
     xs = [x / 10.0 for x in range(-50, 50)]
@@ -99,14 +96,12 @@ def inverse_normal_cdf(p, mu=0, sigma=1, tolerance=0.00001):
 
     return mid_z
 
-print inverse_normal_cdf(0.2, mu=3)
 
 # Bernoulli(p) random variable equals 1 with probability p
 # and 0 with probability 1-p
 def bernoulli_trial(p):
     return 1 if random.random() < p else 0
 
-print bernoulli_trial(0.5)
 
 # A Binomial(n,p) random variable is sum of n independent
 # Bernoulli(p) random variables
@@ -138,10 +133,25 @@ def make_hist(p, n, num_points):
     plt.title("binomial distribution vs normal approximation")
     plt.show()
 
+<<<<<<< HEAD
 if __name__ == "__main__":
+=======
+if __name__ == '__main__':
+
+    print uniform_pdf(0.4)
+    print uniform_cdf(0.4)
+>>>>>>> 1d3f3204fa09666239ab0ac1401df629551a719c
 
     plot_normal_pdf(plt)
 
     plot_normal_cdf(plt)
 
+<<<<<<< HEAD
     make_hist(0.75, 100, 10000)
+=======
+    print inverse_normal_cdf(0.2, mu=3)
+
+    print bernoulli_trial(0.5)
+
+    make_hist(0.75, 100, 10000)
+>>>>>>> 1d3f3204fa09666239ab0ac1401df629551a719c
