@@ -126,7 +126,7 @@ def parse_dict(input_dict, parser_dict):
 
 # pull a field out of a dict
 def picker(field_name):
-    """:returns a functin that picks a field out of a dict"""
+    """returns a function that picks a field out of a dict"""
     return lambda row: row[field_name]
 
 # pluck the same field out of a collection of dicts
@@ -149,6 +149,18 @@ def group_by(grouper, rows, value_transform=None):
                 for key, rows in grouped.iteritems()}
 
 
+def percent_price_change(yesterday, today):
+    return today["closing_price"] / yesterday["closing_price"] - 1
+
+def day_over_day_changes(grouped_rows):
+    # sort the rows by date
+    ordered = sorted(grouped_rows, key=picker("date"))
+
+    # zip with an offset to get pairs of consecutive days
+    return [{ "symbol": today["symbol"],
+              "date": today["date"],
+              "change": percent_price_change(yesterday, today)}
+              for yesterday, today in zip(ordered, ordered[1:])]
 
 if __name__ == '__main__':
     random.seed(0)
@@ -279,4 +291,19 @@ if __name__ == '__main__':
 
     print "max price by symbol"
     pprint.pprint(max_price_by_symbol)
+
+    # key is symbol, value is a list of "change" dicts
+    changes_by_symbol = group_by(picker("symbol"), data, day_over_day_changes)
+
+    # collect all "change" dicts into one big list
+    all_changes = [change
+                   for changes in changes_by_symbol.values()
+                   for change in changes]
+
+    print max(all_changes, key=picker("change"))
+    # {'date': datetime.datetime(1997, 8, 6, 0, 0), 'symbol': 'AAPL', 'change': 0.3283582089552237}
+
+    print min(all_changes, key=picker("change"))
+    # {'date': datetime.datetime(2000, 9, 29, 0, 0), 'symbol': 'AAPL', 'change': -0.5193370165745856}
+
 

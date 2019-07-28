@@ -1,4 +1,4 @@
-#data science from scratch
+# data science from scratch
 
 ## chapter 2 - a crash course in python
 
