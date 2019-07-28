@@ -59,8 +59,6 @@ def plot_normal_pdf(plt):
     plt.legend()
     plt.show()
 
-plot_normal_pdf(plt)
-
 # the cumulative distribution function for normal distribution
 # cannot be written in "elementary" manner.
 # we can use python's math.erf Error Function
@@ -76,8 +74,6 @@ def plot_normal_cdf(plt):
     plt.title("Various normal cdfs")
     plt.legend(loc=4)
     plt.show()
-
-plot_normal_cdf(plt)
 
 # invert normal_cdf to find the value corresponding
 # to a specific probability. use binary search
@@ -142,4 +138,10 @@ def make_hist(p, n, num_points):
     plt.title("binomial distribution vs normal approximation")
     plt.show()
 
-make_hist(0.75, 100, 10000)
+if __name__ == "__main__":
+
+    plot_normal_pdf(plt)
+
+    plot_normal_cdf(plt)
+
+    make_hist(0.75, 100, 10000)
